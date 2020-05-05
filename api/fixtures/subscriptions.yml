@@ -1,0 +1,18 @@
+'App\Entity\Subscription':
+    subscription_0:
+        user: '@user_0' # Emilian The First
+        plan: '@plan_0'
+        billingFrequency: 'monthly'
+        activationDate: <(new \DateTime())>
+    subscription_1:
+        user: '@user_0' # Emilian The First
+        plan: '@plan_3'
+        billingFrequency: 'annual'
+        activationDate: <(new \DateTime())>
+    subscription_2:
+        user: '@user_0' # Emilian The First
+        plan: '@plan_4'
+        billingFrequency: 'monthly'
+        activationDate: <datetimeBetween('-5 days', 'now')>
+        cancellationDate: <datetimeBetween('-2 days', 'now')>
+        

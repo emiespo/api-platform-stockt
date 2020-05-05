@@ -1,0 +1,31 @@
+'App\Entity\Plan':
+    plan_0:
+        code: 'gb'
+        name: 'UK'
+        currency: 'GBP'
+        monthlyCost: '10'
+        annualCost: '50'
+    plan_1:
+        code: 'fr'
+        name: 'France'
+        currency: 'GBP'
+        monthlyCost: '10'
+        annualCost: '60'
+    plan_2:
+        code: 'de'
+        name: 'Germany'
+        currency: 'GBP'
+        monthlyCost: '15'
+        annualCost: '75'
+    plan_3:
+        code: 'us'
+        name: 'USA'
+        currency: 'GBP'
+        monthlyCost: '25'
+        annualCost: '150'
+    plan_4:
+        code: 'jp'
+        name: 'Japan'
+        currency: 'GBP'
+        monthlyCost: '15'
+        annualCost: '65'

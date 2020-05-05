@@ -1,0 +1,54 @@
+Stockopedia PHP Challenge
+-------------------------
+
+Ideas behind this exercise:
+
+ 1. Don't reinvent the wheel: I started with the idea of using the Symfony framework, and found instead:
+    https://api-platform.com/ ... that is a framework to implement exactly what this exercise asked
+ 2. Time spent: ~1d of which a couple of hours :) to write the actual entities required for the task,
+    and the rest of time to learn/refresh how the framework works.
+
+The documentation on how to run the framework can be found here: https://api-platform.com/docs/distribution/
+
+It's mostly a matter of starting the Docker containers with:
+
+$ docker-compose pull # Download the latest versions of the pre-built images
+$ docker-compose up -d # Running in detached mode
+
+Then it should be running locally on the port 8443:
+
+https://localhost:8443/
+
+Why did I choose this framework? because it provides out of the box:
+
+ • An easy way to build Entities + ORM + Fixtures (Symfony)
+ • An easy way to validate entity constraints (Symfony form validation)
+ • All the boilerplate to create an interface and export a swagger towards the µservice infrastructure
+ • An admin panel, a GraphQL layer, and a client boilerplate on top of React
+
+Although off the exercise, two more nice things to have, still provided, are:
+
+ • CQRS by means of the Symfony messenger
+ • DTOs
+
+Being an opensource project in active development, it didn't came without issues:
+
+ • I spent a couple of hours to fix an issue with the default distribution (PHPUnit doesn't work out of the box):
+
+https://github.com/api-platform/core/issues/3153
+
+ • Another issue was with the functional testing of one of the components. Using a custom endpoint, I didn't have
+   time to debug the Symfony routes, so one of the tests, albeit correct is throwing an error because it can't
+   find the route and call the appropriate controller (GetUserSubscriptionsCost)
+
+Two small things I added to the requirements:
+
+ • A currency field to the Plan, but I didn't bother spending time on converting nor formatting (as there's libraries to do that).
+ • An activation/cancellation date for a subscription (standard use-case).
+
+Everything else was kept as simple as possible to cope with the 2 hours time limit (although I spent most of the time to get the framework working :)).
+
+That's it!
+
+Kindest regards,
+Emiliano

@@ -1,0 +1,5 @@
+'App\Entity\User':
+    user_0:
+        name: "Emilian The First"
+    user_{1..9}:
+        name: <name()>
